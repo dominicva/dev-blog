@@ -9,9 +9,6 @@ const FirstPost = () => {
         <title>First post</title>
       </Head>
       <h1>First post</h1>
-      <Link href="/">
-        <a>Back to home page</a>
-      </Link>
     </Layout>
   );
 };

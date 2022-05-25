@@ -1,43 +1,7 @@
 import { FaGithubSquare, FaTwitterSquare } from 'react-icons/fa';
 import { MdLocationPin } from 'react-icons/md';
 import Image from 'next/image';
-/**
- * STYLES START
- */
-
-const header = {
-  display: 'flex',
-  alignItems: 'center',
-};
-
-const h1 = {
-  marginLeft: '0.75rem',
-};
-
-const avatar = {
-  borderRadius: '50%',
-  // marginRight: '1rem',
-};
-
-const container = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-};
-
-const social = {
-  ...container,
-  flexDirection: 'row',
-  paddingLeft: 0,
-};
-
-const icon = {
-  marginRight: '0.5rem',
-};
-
-/**
- * STYLES END
- */
+import { header, avatar, h1, social, container, icon } from './styles';
 
 const Intro = ({ name }) => {
   return (

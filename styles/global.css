@@ -7,7 +7,7 @@
   --secondary: #36f1cd;
   --secondary-light: #7bffff;
   --secondary-dark: #00bd9c;
-  --error: #ff6663ff;
+  --error: #ff6663;
 }
 
 * {
@@ -29,7 +29,7 @@ body {
 a {
   color: var(--secondary);
   text-decoration: none;
-  opacity: 0.9;
+  opacity: 0.87;
 }
 
 a:hover {

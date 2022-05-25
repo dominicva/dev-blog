@@ -1,7 +1,3 @@
-/**
- * STYLES START
- */
-
 export const header = {
   display: 'flex',
   alignItems: 'center',
@@ -13,7 +9,6 @@ export const h1 = {
 
 export const avatar = {
   borderRadius: '50%',
-  // marginRight: '1rem',
 };
 
 export const container = {
@@ -31,7 +26,3 @@ export const social = {
 export const icon = {
   marginRight: '0.5rem',
 };
-
-/**
- * STYLES END
- */

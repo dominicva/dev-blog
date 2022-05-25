@@ -1,0 +1,9 @@
+export const white = 'rgba(255, 255, 255, 0.87)';
+export const whiteDim = 'rgba(255, 255, 255, 0.75)';
+export const primary = '#121421';
+export const primaryLight = '#383a48';
+export const primaryDark = '#000000';
+export const secondary = '#36f1cd';
+export const secondaryLight = '#7bffff';
+export const secondaryDark = '#00bd9c';
+export const error = '#ff6663';

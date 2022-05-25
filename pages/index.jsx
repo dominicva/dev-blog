@@ -24,10 +24,6 @@ export default function Home({ allPostsData }) {
       <section className={utilStyles.headingMd}>
         <p>Hi, I'm Dom</p>
         <p>I like JS</p>
-        Check out my first blog{' '}
-        <Link href="/posts/first-post">
-          <a>post</a>
-        </Link>
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -35,9 +31,11 @@ export default function Home({ allPostsData }) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              {title}
-              <br />
-              {id}
+              <Link href={`/posts/${id}`}>
+                <a> {title}</a>
+              </Link>
+              {/* <br /> */}
+              {/* {id} */}
               <br />
               {date}
             </li>

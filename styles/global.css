@@ -1,5 +1,6 @@
 :root {
   --white: rgba(255, 255, 255, 0.87);
+  --white-dim: rgba(255, 255, 255, 0.75);
   --primary: #121421;
   --primary-light: #383a48;
   --primary-dark: #000000;
@@ -9,10 +10,14 @@
   --error: #ff6663ff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
@@ -21,20 +26,20 @@ body {
   background-color: var(--primary);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 a {
   color: var(--secondary);
   text-decoration: none;
+  opacity: 0.9;
 }
 
 a:hover {
+  opacity: 1;
   text-decoration: underline;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+ul,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

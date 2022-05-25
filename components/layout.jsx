@@ -1,65 +1,34 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 
-const name = 'Dom van Almsick';
 export const siteTitle = 'dominicva';
 
 const Layout = ({ children, home }) => {
   return (
-    <div className={styles.container}>
+    <div
+      style={{
+        padding: '1rem',
+        maxWidth: '768px',
+        margin: 'auto',
+      }}
+    >
       <Head>
         <meta
           name="description"
-          content="A space for Dom to share ideas and projects."
+          content="A space for Dom to share resources, ideas, and projects."
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.png"
-              alt={name}
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-            />
-            <h1 className={utilStyles.heading2XL}>{name}</h1>
-          </>
-        ) : (
-          <>
+      <div>
+        <main>{children}</main>
+        {!home && (
+          <div>
             <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.png"
-                  alt={name}
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                />
-              </a>
+              <a>← Back to home</a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
+          </div>
         )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      </div>
     </div>
   );
 };

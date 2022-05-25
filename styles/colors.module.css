@@ -1,0 +1,11 @@
+:root {
+  --white: rgba(255, 255, 255, 0.85);
+  --white-dim: rgba(255, 255, 255, 0.5);
+  --primary: #121421;
+  --primary-light: #383a48;
+  --primary-dark: #000000;
+  --secondary: #36f1cd;
+  --secondary-light: #7bffff;
+  --secondary-dark: #00bd9c;
+  --error: #ff6663ff;
+}

@@ -1,6 +1,7 @@
 export const header = {
   display: 'flex',
   alignItems: 'center',
+  marginBottom: '1.5rem',
 };
 
 export const h1 = {

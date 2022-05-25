@@ -5,7 +5,9 @@ import Image from 'next/image';
 import { header, avatar, h1, social, container, icon } from './styles';
 import { primary, secondary } from '../colors/';
 
-const Intro = ({ name }) => {
+const name = 'Dom van Almsick';
+
+const Intro = () => {
   return (
     <section>
       <div>
@@ -18,22 +20,8 @@ const Intro = ({ name }) => {
             height={56}
             style={avatar}
           />
-          <h1 style={h1}>Dom van Almsick</h1>
+          <h1 style={h1}>{name}</h1>
         </header>
-        <p>I enjoy teaching, learning, and writing JavaScript.</p>
-        <p>
-          Outside coding, the things I care about mostly relate to effective
-          altruism and the long-term future. How might we engineer our way
-          towards utopia? We will have to define it along the way, of couse.
-        </p>
-        <p>
-          I am not yet certain what I will share here. Expect miscellaneous
-          resources, ideas, and projects.
-        </p>
-        <p>
-          In the meantime, check out my GitHub / Twitter, or book a pair
-          programming session with me from the links below.
-        </p>
         <div
           style={{
             display: 'flex',
@@ -51,7 +39,19 @@ const Intro = ({ name }) => {
             }}
           >
             <MdLocationPin size={30} style={{ marginRight: '0.25rem' }} />
-            Current location: Mexico
+            <span style={{ paddingRight: '0.5rem' }}>Currently:</span>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <Image
+                src="/svgs/mexican-flag.svg"
+                alt="Meixcan flag"
+                width={22}
+                height={16}
+                style={{
+                  borderRadius: '2px',
+                }}
+              />
+              <span style={{ marginLeft: '0.25rem' }}>Mexico</span>
+            </div>
           </a>
 
           <div id="social" style={social}>
@@ -78,6 +78,23 @@ const Intro = ({ name }) => {
             </a>
           </div>
         </div>
+        <p>I enjoy teaching, learning, and writing JavaScript.</p>
+        <p>
+          Other things I care about mostly relate to{' '}
+          <a href="https://www.effectivealtruism.org/" target="_blank">
+            effective altruism
+          </a>{' '}
+          and the long-term future.
+        </p>
+        <p>
+          I am not certain what I will share here. Expect miscellaneous
+          resources, ideas, and projects that inspire me.
+        </p>
+        <p>
+          For now, by clicking the left-most icon above you can schedule a pair
+          programming session with me. Booking takes about 5 seconds. If you are
+          interested, don't be shy!
+        </p>
       </div>
       <div style={{ ...container, padding: '1rem' }}></div>
     </section>

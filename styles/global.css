@@ -1,9 +1,12 @@
 :root {
-  --fresh-coral: #ff6663ff;
-  --white: #fff;
-  --fresh-blue: #39a0edff;
-  --fresh-green: #36f1cdff;
-  --dark: #121420;
+  --white: rgba(255, 255, 255, 0.87);
+  --primary: #121421;
+  --primary-light: #383a48;
+  --primary-dark: #000000;
+  --secondary: #36f1cd;
+  --secondary-light: #7bffff;
+  --secondary-dark: #00bd9c;
+  --error: #ff6663ff;
 }
 
 html,
@@ -15,7 +18,7 @@ body {
   line-height: 1.6;
   font-size: 18px;
   color: var(--white);
-  background-color: var(--dark);
+  background-color: var(--primary);
 }
 
 * {
@@ -23,7 +26,7 @@ body {
 }
 
 a {
-  color: var(--fresh-blue);
+  color: var(--secondary);
   text-decoration: none;
 }
 

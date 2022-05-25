@@ -1,3 +1,11 @@
+:root {
+  --fresh-coral: #ff6663ff;
+  --white: #fff;
+  --fresh-blue: #39a0edff;
+  --fresh-green: #36f1cdff;
+  --dark: #121420;
+}
+
 html,
 body {
   padding: 0;
@@ -6,6 +14,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  color: var(--white);
+  background-color: var(--dark);
 }
 
 * {
@@ -13,7 +23,7 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: var(--fresh-blue);
   text-decoration: none;
 }
 

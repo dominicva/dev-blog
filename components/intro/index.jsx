@@ -2,43 +2,45 @@ import { FaGithubSquare, FaTwitterSquare } from 'react-icons/fa';
 import { MdLocationPin } from 'react-icons/md';
 import { BsCodeSlash } from 'react-icons/bs';
 import Image from 'next/image';
-import { header, avatar, h1, social, container, icon } from './styles';
-import { primary, secondary } from '../colors/';
+import {
+  avatar,
+  h1,
+  social,
+  container,
+  socialIcon,
+  location,
+  locationIcon,
+  linksSection,
+  codeIcon,
+} from './styles';
 
-const name = 'Dom van Almsick';
+const firstName = 'Dom';
+const lastName = 'van Almsick';
+const fullName = `${firstName} ${lastName}`;
+const imageTitle = 'cosmic microwave background';
 
 const Intro = () => {
   return (
     <section>
       <div>
-        <header style={header}>
+        <header style={container}>
           <Image
             priority
-            src="/images/profile.png"
-            alt={name}
-            width={56}
-            height={56}
+            src="/images/cmb.png"
+            alt={imageTitle}
+            width={248}
+            height={248}
             style={avatar}
           />
-          <h1 style={h1}>{name}</h1>
+          <h1 style={h1}>{fullName}</h1>
         </header>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'flex-start',
-            flexDirection: 'column',
-          }}
-        >
+        <div style={linksSection}>
           <a
             href="https://www.google.com/maps/place/Quintana+Roo/"
             target="_blank"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              marginBottom: '1rem',
-            }}
+            style={location}
           >
-            <MdLocationPin size={30} style={{ marginRight: '0.25rem' }} />
+            <MdLocationPin size={30} style={locationIcon} />
             <span style={{ paddingRight: '0.5rem' }}>Currently:</span>
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <Image
@@ -59,22 +61,13 @@ const Intro = () => {
               href="https://calendly.com/dominicvana/pair-programming"
               target="_blank"
             >
-              <BsCodeSlash
-                size="31.5px"
-                style={{
-                  ...icon,
-                  padding: '3px',
-                  borderRadius: '4px',
-                  color: primary,
-                  backgroundColor: secondary,
-                }}
-              />
+              <BsCodeSlash size="31.5px" style={codeIcon} />
             </a>
             <a href="https://www.twitter.com/dominicva" target="_blank">
-              <FaTwitterSquare size={36} style={icon} />
+              <FaTwitterSquare size={36} style={socialIcon} />
             </a>
             <a href="https://www.github.com/dominicva" target="_blank">
-              <FaGithubSquare size={36} style={icon} />
+              <FaGithubSquare size={36} style={socialIcon} />
             </a>
           </div>
         </div>

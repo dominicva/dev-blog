@@ -1,21 +1,24 @@
-export const header = {
+import { primary, secondary } from '../colors/';
+
+export const container = {
   display: 'flex',
   alignItems: 'center',
-  marginBottom: '1.5rem',
+  flexDirection: 'column',
 };
 
 export const h1 = {
-  marginLeft: '0.75rem',
+  alignSelf: 'flex-start',
+  marginTop: '1.5rem',
+  marginBottom: '1.5rem',
 };
 
 export const avatar = {
   borderRadius: '50%',
 };
 
-export const container = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
+export const linksSection = {
+  ...container,
+  alignItems: 'flex-start',
 };
 
 export const social = {
@@ -24,6 +27,25 @@ export const social = {
   paddingLeft: 0,
 };
 
-export const icon = {
+export const socialIcon = {
   marginRight: '0.5rem',
+};
+
+export const codeIcon = {
+  ...socialIcon,
+  padding: '3px',
+  borderRadius: '4px',
+  color: primary,
+  backgroundColor: secondary,
+};
+
+export const location = {
+  ...container,
+  flexDirection: 'row',
+  alignItems: 'center',
+  marginBottom: '0.75rem',
+};
+
+export const locationIcon = {
+  marginLeft: '-3px',
 };

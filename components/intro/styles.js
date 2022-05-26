@@ -2,14 +2,14 @@ import { primary, secondary } from '../colors/';
 
 export const container = {
   display: 'flex',
-  alignItems: 'center',
   flexDirection: 'column',
+  alignItems: 'center',
 };
 
 export const h1 = {
-  alignSelf: 'flex-start',
-  marginTop: '1.5rem',
-  marginBottom: '1.5rem',
+  // alignSelf: 'flex-start',
+  marginTop: '1.25rem',
+  marginBottom: '1rem',
 };
 
 export const avatar = {
@@ -18,7 +18,7 @@ export const avatar = {
 
 export const linksSection = {
   ...container,
-  alignItems: 'flex-start',
+  // alignItems: 'flex-start',
 };
 
 export const social = {
@@ -46,6 +46,10 @@ export const location = {
   marginBottom: '0.75rem',
 };
 
-export const locationIcon = {
-  marginLeft: '-3px',
+export const bio = {
+  ...container,
+  alignItems: 'flex-start',
+  margin: '1.5rem 0',
 };
+
+export const bioP = { marginBottom: '0.5rem' };

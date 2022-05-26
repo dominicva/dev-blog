@@ -7,11 +7,13 @@ import {
   h1,
   social,
   container,
+  icon,
   socialIcon,
   location,
-  locationIcon,
   linksSection,
   codeIcon,
+  bio,
+  bioP,
 } from './styles';
 
 const firstName = 'Dom';
@@ -40,7 +42,7 @@ const Intro = () => {
             target="_blank"
             style={location}
           >
-            <MdLocationPin size={30} style={locationIcon} />
+            <MdLocationPin size={30} style={icon} />
             <span style={{ paddingRight: '0.5rem' }}>Currently:</span>
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <Image
@@ -71,23 +73,27 @@ const Intro = () => {
             </a>
           </div>
         </div>
-        <p>I enjoy teaching, learning, and writing JavaScript.</p>
-        <p>
-          Other things I care about mostly relate to{' '}
-          <a href="https://www.effectivealtruism.org/" target="_blank">
-            effective altruism
-          </a>{' '}
-          and the long-term future.
-        </p>
-        <p>
-          I am not certain what I will share here. Expect miscellaneous
-          resources, ideas, and projects that inspire me.
-        </p>
-        <p>
-          For now, by clicking the left-most icon above you can schedule a pair
-          programming session with me. Booking takes about 5 seconds. If you are
-          interested, don't be shy!
-        </p>
+        <div id="bio" style={bio}>
+          <p style={bioP}>
+            I enjoy teaching, learning, and writing JavaScript.
+          </p>
+          <p style={bioP}>
+            Other things I care about mostly relate to{' '}
+            <a href="https://www.effectivealtruism.org/" target="_blank">
+              effective altruism
+            </a>{' '}
+            and the long-term future.
+          </p>
+          <p style={bioP}>
+            I am not certain what I will share here. Expect miscellaneous
+            resources, ideas, and projects that inspire me.
+          </p>
+          <p style={bioP}>
+            For now, by clicking the left-most icon above you can schedule a
+            pair programming session with me. Booking takes about 5 seconds. If
+            you are interested, don't be shy!
+          </p>
+        </div>
       </div>
       <div style={{ ...container, padding: '1rem' }}></div>
     </section>

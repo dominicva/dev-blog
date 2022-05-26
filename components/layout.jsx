@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
-export const siteTitle = 'dominicva';
+import { siteTitle } from './constants';
 
 const Layout = ({ children, home }) => {
   return (
@@ -10,6 +9,7 @@ const Layout = ({ children, home }) => {
         padding: '1rem',
         maxWidth: '768px',
         margin: 'auto',
+        minHeight: '100vh',
       }}
     >
       <Head>

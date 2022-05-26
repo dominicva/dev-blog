@@ -33,6 +33,13 @@ ol {
   padding: 0;
 }
 
+blockquote {
+  font-style: italic;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   color: var(--secondary);
   text-decoration: none;

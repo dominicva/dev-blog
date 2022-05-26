@@ -1,17 +1,13 @@
-import { FaGithubSquare, FaTwitterSquare } from 'react-icons/fa';
+import { FaCode, FaTwitter, FaGithub } from 'react-icons/fa';
 import { MdLocationPin } from 'react-icons/md';
-import { BsCodeSlash } from 'react-icons/bs';
 import Image from 'next/image';
 import {
   avatar,
   h1,
-  social,
   container,
   icon,
   socialIcon,
   location,
-  linksSection,
-  codeIcon,
   bio,
   bioP,
 } from './styles';
@@ -20,6 +16,7 @@ const firstName = 'Dom';
 const lastName = 'van Almsick';
 const fullName = `${firstName} ${lastName}`;
 const imageTitle = 'cosmic microwave background';
+const currentLocation = 'Mexico';
 
 const Intro = () => {
   return (
@@ -36,7 +33,7 @@ const Intro = () => {
           />
           <h1 style={h1}>{fullName}</h1>
         </header>
-        <div style={linksSection}>
+        <div style={container}>
           <a
             href="https://www.google.com/maps/place/Quintana+Roo/"
             target="_blank"
@@ -54,44 +51,36 @@ const Intro = () => {
                   borderRadius: '2px',
                 }}
               />
-              <span style={{ marginLeft: '0.25rem' }}>Mexico</span>
+              <span style={{ marginLeft: '0.25rem' }}>{currentLocation}</span>
             </div>
           </a>
 
-          <div id="social" style={social}>
+          <div id="social">
             <a
               href="https://calendly.com/dominicvana/pair-programming"
               target="_blank"
             >
-              <BsCodeSlash size="31.5px" style={codeIcon} />
+              <FaCode size={32} style={socialIcon} />
             </a>
             <a href="https://www.twitter.com/dominicva" target="_blank">
-              <FaTwitterSquare size={36} style={socialIcon} />
+              <FaTwitter size={32} style={socialIcon} />
             </a>
             <a href="https://www.github.com/dominicva" target="_blank">
-              <FaGithubSquare size={36} style={socialIcon} />
+              <FaGithub size={32} style={{ ...socialIcon, marginRight: 0 }} />
             </a>
           </div>
         </div>
         <div id="bio" style={bio}>
           <p style={bioP}>
-            I enjoy teaching, learning, and writing JavaScript.
+            I am a full-stack <b>JavaScript enthusiast and teacher</b>. Click
+            the first icon above to schedule a (free) pair programming session.
           </p>
           <p style={bioP}>
             Other things I care about mostly relate to{' '}
             <a href="https://www.effectivealtruism.org/" target="_blank">
-              effective altruism
+              <b>effective altruism</b>
             </a>{' '}
             and the long-term future.
-          </p>
-          <p style={bioP}>
-            I am not certain what I will share here. Expect miscellaneous
-            resources, ideas, and projects that inspire me.
-          </p>
-          <p style={bioP}>
-            For now, by clicking the left-most icon above you can schedule a
-            pair programming session with me. Booking takes about 5 seconds. If
-            you are interested, don't be shy!
           </p>
         </div>
       </div>

@@ -13,9 +13,15 @@ export const avatar = {
   borderRadius: '50%',
 };
 
+export const social = {
+  display: 'flex',
+  width: '100%',
+  justifyContent: 'center',
+};
+
 export const socialIcon = {
   padding: '0 4px',
-  marginRight: '0.75rem',
+  marginRight: '1rem',
 };
 
 export const location = {
@@ -28,7 +34,8 @@ export const location = {
 export const bio = {
   ...container,
   alignItems: 'flex-start',
-  margin: '1.5rem 0',
+  marginTop: '1.5rem',
+  marginBottom: '3rem',
 };
 
 export const bioP = { marginBottom: '0.5rem' };

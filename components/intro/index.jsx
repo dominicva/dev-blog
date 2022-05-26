@@ -6,6 +6,7 @@ import {
   h1,
   container,
   icon,
+  social,
   socialIcon,
   location,
   bio,
@@ -55,7 +56,7 @@ const Intro = () => {
             </div>
           </a>
 
-          <div id="social">
+          <div id="social" style={social}>
             <a
               href="https://calendly.com/dominicvana/pair-programming"
               target="_blank"
@@ -73,7 +74,8 @@ const Intro = () => {
         <div id="bio" style={bio}>
           <p style={bioP}>
             I am a full-stack <b>JavaScript enthusiast and teacher</b>. Click
-            the first icon above to schedule a (free) pair programming session.
+            the first icon above to schedule a (free) pair programming session
+            🤓.
           </p>
           <p style={bioP}>
             Other things I care about mostly relate to{' '}
@@ -84,7 +86,6 @@ const Intro = () => {
           </p>
         </div>
       </div>
-      <div style={{ ...container, padding: '1rem' }}></div>
     </section>
   );
 };

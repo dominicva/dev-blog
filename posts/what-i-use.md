@@ -11,24 +11,19 @@ Anyone with a hobby bordering on obsession can relate to this: we take pride in 
 
 I have plenty of custom settings, but everyone has their own preferences. I will mention two features though.
 
-1. Macros
+#### 1. Macros
 
-   This macros [extentsion](https://marketplace.visualstudio.com/items?itemName=geddski.macros) helps you automate repetitive tasks. For example, I like to label what I `console.log`. Say I've got
+This macros [extentsion](https://marketplace.visualstudio.com/items?itemName=geddski.macros) helps you automate repetitive tasks. For example, I like to label what I `console.log`. Say I've got
 
-   ```javascript
-   const data = await fetch(url).then(r => r.json());
-   ```
+`const data = await fetch(url).then(r => r.json());`
 
-   With my cursor on `data`, one keystroke and I get this
+With my cursor on `data`, one keystroke and I get this
 
-   ```javascript
-   const data = await fetch(url).then(r => r.json());
-   console.log('data:', data);
-   ```
+`const data = await fetch(url).then(r => r.json()); console.log('data:', data);`
 
-   Makes me smile every time.
+Makes me smile every time.
 
-2. Snippets
+#### 2. Snippets
 
 ### [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 

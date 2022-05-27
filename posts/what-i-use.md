@@ -9,22 +9,26 @@ Anyone with a hobby bordering on obsession can relate to this: we take pride in 
 
 ### [VSCode](https://code.visualstudio.com/)
 
-I have plenty of custom settings, but everyone has their own preferences. I will mention one feature though.
+I have plenty of custom settings, but everyone has their own preferences. I will mention two features though.
 
-This macros [extentsion](https://marketplace.visualstudio.com/items?itemName=geddski.macros) helps you automate repetitive tasks. For example, I like to label what I `console.log`. Say I've got
+1. Macros
 
-```javascript
-const data = await fetch(url).then(r => r.json());
-```
+   This macros [extentsion](https://marketplace.visualstudio.com/items?itemName=geddski.macros) helps you automate repetitive tasks. For example, I like to label what I `console.log`. Say I've got
 
-With my cursor on `data`, one keystroke and I've got this
+   ```javascript
+   const data = await fetch(url).then(r => r.json());
+   ```
 
-```javascript
-const data = await fetch(url).then(r => r.json());
-console.log('data:', data);
-```
+   With my cursor on `data`, one keystroke and I get this
 
-Makes me smile every time.
+   ```javascript
+   const data = await fetch(url).then(r => r.json());
+   console.log('data:', data);
+   ```
+
+   Makes me smile every time.
+
+2. Snippets
 
 ### [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 

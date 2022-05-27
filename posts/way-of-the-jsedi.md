@@ -3,6 +3,8 @@ title: 'The Way of the J(S)edi'
 date: '2022-05-26'
 ---
 
+> **this is so WIP it's not even ready for feedback lol**
+
 ## Two stages
 
 ### Stage 1: JS & programming fundamentals

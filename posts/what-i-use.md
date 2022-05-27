@@ -3,12 +3,31 @@ title: 'What I Use'
 date: '2022-05-24'
 ---
 
-> _To be clear, we're talking developer tools – not drugs or supplements._
+Anyone with a hobby bordering on obsession can relate to this: we take pride in the tools we use. They help us feel like the craftsmen we aspire to be.
 
-## A list of the code-related tools I use
+## The Essentials
 
-- VSCode
+### [VSCode](https://code.visualstudio.com/)
 
-- Prettier
+I have plenty of custom settings, but everyone has their own preferences. I will mention one feature though.
 
-- ESLint
+This macros [extentsion](https://marketplace.visualstudio.com/items?itemName=geddski.macros) helps you automate repetitive tasks. For example, I like to label what I `console.log`. Say I've got
+
+```javascript
+const data = await fetch(url).then(r => r.json());
+```
+
+With my cursor on `data`, one keystroke and I've got this
+
+```javascript
+const data = await fetch(url).then(r => r.json());
+console.log('data:', data);
+```
+
+Makes me smile every time.
+
+### [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+The only useful thing I have to say about prettier is: **get it**.
+
+### [Run JS](https://runjs.app/)

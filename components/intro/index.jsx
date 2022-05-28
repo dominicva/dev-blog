@@ -5,7 +5,7 @@ import Image from 'next/image';
 import {
   avatar,
   h1,
-  container,
+  // container,
   icon,
   social,
   socialIcon,
@@ -24,20 +24,20 @@ const Intro = () => {
   return (
     <section>
       <div>
-        <header style={container}>
+        <header id="intro" className="container">
           <Image
             priority
             src="/images/cmb.png"
             alt={imageTitle}
             width={248}
             height={248}
-            style={avatar}
           />
-          <div style={container}>
+          <div id="info">
             <h1 style={h1}>{fullName}</h1>
 
-            <div style={container}>
+            <div id="info-links" className="container">
               <a
+                id="link-location"
                 href="https://www.google.com/maps/place/Quintana+Roo/"
                 target="_blank"
                 style={location}
@@ -60,7 +60,7 @@ const Intro = () => {
                 </div>
               </a>
 
-              <div id="social" style={social}>
+              <div id="social">
                 <a
                   href="https://calendly.com/dominicvana/pair-programming"
                   target="_blank"
@@ -79,6 +79,39 @@ const Intro = () => {
               </div>
             </div>
           </div>
+
+          <style jsx>{`
+            .container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+
+            #social {
+              display: flex;
+              width: 100%;
+              justify-content: center;
+            }
+
+            @media (min-width: 768px) {
+              #intro {
+                flex-direction: row-reverse;
+                justify-content: center;
+              }
+
+              #info {
+                margin-right: 1.5rem;
+              }
+
+              #info-links {
+                align-items: flex-start;
+              }
+
+              #social {
+                justify-content: flex-start;
+              }
+            }
+          `}</style>
         </header>
         <div id="bio" style={bio}>
           <p style={bioP}>

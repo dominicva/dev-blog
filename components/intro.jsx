@@ -1,18 +1,6 @@
-import { useState, useEffect } from 'react';
 import { FaCode, FaTwitter, FaGithub } from 'react-icons/fa';
 import { MdLocationPin } from 'react-icons/md';
 import Image from 'next/image';
-import {
-  avatar,
-  h1,
-  // container,
-  icon,
-  social,
-  socialIcon,
-  location,
-  bio,
-  bioP,
-} from './styles';
 
 const firstName = 'Dom';
 const lastName = 'van Almsick';
@@ -33,16 +21,15 @@ const Intro = () => {
             height={248}
           />
           <div id="info">
-            <h1 style={h1}>{fullName}</h1>
+            <h1>{fullName}</h1>
 
             <div id="info-links" className="container">
               <a
                 id="link-location"
                 href="https://www.google.com/maps/place/Quintana+Roo/"
                 target="_blank"
-                style={location}
               >
-                <MdLocationPin size={30} style={icon} />
+                <MdLocationPin size={30} />
                 <span style={{ paddingRight: '0.5rem' }}>Currently:</span>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Image
@@ -64,62 +51,35 @@ const Intro = () => {
                 <a
                   href="https://calendly.com/dominicvana/pair-programming"
                   target="_blank"
+                  className="social-icon"
                 >
-                  <FaCode size={32} style={socialIcon} />
+                  <FaCode size={32} />
                 </a>
-                <a href="https://www.twitter.com/dominicva" target="_blank">
-                  <FaTwitter size={32} style={socialIcon} />
+                <a
+                  href="https://www.twitter.com/dominicva"
+                  target="_blank"
+                  className="social-icon"
+                >
+                  <FaTwitter size={32} />
                 </a>
-                <a href="https://www.github.com/dominicva" target="_blank">
-                  <FaGithub
-                    size={32}
-                    style={{ ...socialIcon, marginRight: 0 }}
-                  />
+                <a
+                  href="https://www.github.com/dominicva"
+                  target="_blank"
+                  className="social-icon"
+                >
+                  <FaGithub size={32} />
                 </a>
               </div>
             </div>
           </div>
-
-          <style jsx>{`
-            .container {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
-
-            #social {
-              display: flex;
-              width: 100%;
-              justify-content: center;
-            }
-
-            @media (min-width: 768px) {
-              #intro {
-                flex-direction: row-reverse;
-                justify-content: center;
-              }
-
-              #info {
-                margin-right: 1.5rem;
-              }
-
-              #info-links {
-                align-items: flex-start;
-              }
-
-              #social {
-                justify-content: flex-start;
-              }
-            }
-          `}</style>
         </header>
-        <div id="bio" style={bio}>
-          <p style={bioP}>
+        <div id="bio">
+          <p>
             I am a full-stack <b>JavaScript enthusiast and teacher</b>. Click
             the first icon above to schedule a (free) pair programming session
             🤓.
           </p>
-          <p style={bioP}>
+          <p>
             Other things I care about mostly relate to{' '}
             <a href="https://www.effectivealtruism.org/" target="_blank">
               <b>effective altruism</b>
@@ -127,15 +87,78 @@ const Intro = () => {
             and the long-term future.
           </p>
         </div>
+        <style jsx>{`
+          h1 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+
+          .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          #intro {
+            margin-bottom: 1.5rem;
+          }
+
+          #link-location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+          }
+
+          #social {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+          }
+
+          .social-icon {
+            padding: 0 4px;
+            margin-right: 1rem;
+          }
+
+          .social-icon:last-of-type {
+            margin-right: 0;
+          }
+
+          #bio {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+          }
+
+          #bio p {
+            margin-bottom: 0.5rem;
+          }
+
+          @media (min-width: 768px) {
+            #intro {
+              flex-direction: row-reverse;
+              justify-content: flex-end;
+              margin-top: 2rem;
+              margin-bottom: 2rem;
+            }
+
+            #info {
+              margin-right: 2rem;
+            }
+
+            #info-links {
+              align-items: flex-start;
+            }
+
+            #social {
+              justify-content: flex-start;
+            }
+          }
+        `}</style>
       </div>
     </section>
   );
 };
 
 export default Intro;
-
-// <!-- Calendly badge widget begin -->
-// <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-// <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-// <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/dominicvana', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
-// <!-- Calendly badge widget end --></link>

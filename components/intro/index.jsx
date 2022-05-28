@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { FaCode, FaTwitter, FaGithub } from 'react-icons/fa';
 import { MdLocationPin } from 'react-icons/md';
 import Image from 'next/image';
@@ -32,45 +33,53 @@ const Intro = () => {
             height={248}
             style={avatar}
           />
-          <h1 style={h1}>{fullName}</h1>
-        </header>
-        <div style={container}>
-          <a
-            href="https://www.google.com/maps/place/Quintana+Roo/"
-            target="_blank"
-            style={location}
-          >
-            <MdLocationPin size={30} style={icon} />
-            <span style={{ paddingRight: '0.5rem' }}>Currently:</span>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <Image
-                src="/svgs/mexican-flag.svg"
-                alt="Meixcan flag"
-                width={22}
-                height={16}
-                style={{
-                  borderRadius: '2px',
-                }}
-              />
-              <span style={{ marginLeft: '0.25rem' }}>{currentLocation}</span>
-            </div>
-          </a>
+          <div style={container}>
+            <h1 style={h1}>{fullName}</h1>
 
-          <div id="social" style={social}>
-            <a
-              href="https://calendly.com/dominicvana/pair-programming"
-              target="_blank"
-            >
-              <FaCode size={32} style={socialIcon} />
-            </a>
-            <a href="https://www.twitter.com/dominicva" target="_blank">
-              <FaTwitter size={32} style={socialIcon} />
-            </a>
-            <a href="https://www.github.com/dominicva" target="_blank">
-              <FaGithub size={32} style={{ ...socialIcon, marginRight: 0 }} />
-            </a>
+            <div style={container}>
+              <a
+                href="https://www.google.com/maps/place/Quintana+Roo/"
+                target="_blank"
+                style={location}
+              >
+                <MdLocationPin size={30} style={icon} />
+                <span style={{ paddingRight: '0.5rem' }}>Currently:</span>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Image
+                    src="/svgs/mexican-flag.svg"
+                    alt="Meixcan flag"
+                    width={22}
+                    height={16}
+                    style={{
+                      borderRadius: '2px',
+                    }}
+                  />
+                  <span style={{ marginLeft: '0.25rem' }}>
+                    {currentLocation}
+                  </span>
+                </div>
+              </a>
+
+              <div id="social" style={social}>
+                <a
+                  href="https://calendly.com/dominicvana/pair-programming"
+                  target="_blank"
+                >
+                  <FaCode size={32} style={socialIcon} />
+                </a>
+                <a href="https://www.twitter.com/dominicva" target="_blank">
+                  <FaTwitter size={32} style={socialIcon} />
+                </a>
+                <a href="https://www.github.com/dominicva" target="_blank">
+                  <FaGithub
+                    size={32}
+                    style={{ ...socialIcon, marginRight: 0 }}
+                  />
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
+        </header>
         <div id="bio" style={bio}>
           <p style={bioP}>
             I am a full-stack <b>JavaScript enthusiast and teacher</b>. Click

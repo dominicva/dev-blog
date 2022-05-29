@@ -26,6 +26,11 @@ const Post = ({ title, date, contentHtml }) => {
       </header>
 
       <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      <style jsx>{`
+        article {
+          grid-column: 1 / -1;
+        }
+      `}</style>
     </article>
   );
 };

@@ -81,7 +81,11 @@ const Intro = () => {
           </p>
           <p>
             Other things I care about mostly relate to{' '}
-            <a href="https://www.effectivealtruism.org/" target="_blank">
+            <a
+              className="text-link"
+              href="https://www.effectivealtruism.org/"
+              target="_blank"
+            >
               <b>effective altruism</b>
             </a>{' '}
             and the long-term future.

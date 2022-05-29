@@ -43,10 +43,34 @@ blockquote {
 a {
   color: var(--secondary);
   text-decoration: none;
-  opacity: 0.9;
+  opacity: 0.87;
 }
 
 a:hover {
   opacity: 1;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+}
+
+/*
+Thank you CSS tricks!
+https://css-tricks.com/css-hover-effects-background-masks-3d/
+*/
+.text-link {
+  --b: 0.1em; /* the thickness of the line */
+  --c: var(--secondary); /* the color */
+  color: var(--secondary);
+  padding-block: var(--b);
+  background: linear-gradient(var(--c) 50%, #000 0) 0%
+      calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
+      no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.25s var(--_s, 0s) linear,
+    background-size 0.25s calc(0.25s - var(--_s, 0s));
+}
+
+.text-link:hover {
+  --_p: 100%;
+  --_s: 0.3s;
 }

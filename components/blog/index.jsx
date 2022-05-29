@@ -10,7 +10,7 @@ const Blog = ({ allPostsData }) => {
         {allPostsData.map(({ id, date, title }) => (
           <li key={id} style={postPreview}>
             <Link href={`/posts/${id}`}>
-              <a>{title}</a>
+              <a className="text-link">{title}</a>
             </Link>
 
             <small style={postDate}>

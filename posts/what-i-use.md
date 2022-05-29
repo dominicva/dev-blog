@@ -9,7 +9,7 @@ Anyone with a hobby bordering on obsession can relate to this: we take pride in 
 
 ### [VSCode](https://code.visualstudio.com/)
 
-I have plenty of custom settings, but everyone has their own preferences. I will mention two features though.
+I have plenty of custom settings, but everyone has their own preferences. I will mention three features though.
 
 #### 1. Macros
 
@@ -24,6 +24,8 @@ With my cursor on `data`, one keystroke and I get this
 Makes me smile every time.
 
 #### 2. Snippets
+
+#### 3. GitHub Copilot
 
 ### [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 

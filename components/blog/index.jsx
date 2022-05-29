@@ -7,7 +7,7 @@ const Blog = ({ allPostsData }) => {
     <section
       style={{
         display: 'grid',
-        'grid-template-columns': 'minmax(min-content, 6rem) 1fr',
+        gridTemplateColumns: 'minmax(min-content, 6rem) 1fr',
         gap: '1rem',
       }}
     >

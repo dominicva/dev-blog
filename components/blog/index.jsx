@@ -4,13 +4,7 @@ import { h2, list, postPreview, postDate } from './styles.js';
 
 const Blog = ({ allPostsData }) => {
   return (
-    <section
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'minmax(min-content, 6rem) 1fr',
-        gap: '1rem',
-      }}
-    >
+    <section className="blog">
       <h2 style={h2}>Blog</h2>
       <ul style={list}>
         {allPostsData.map(({ id, date, title }) => (
@@ -25,6 +19,13 @@ const Blog = ({ allPostsData }) => {
           </li>
         ))}
       </ul>
+      <style jsx>{`
+        @media (min-width: 768px) {
+          .blog {
+            margin-left: 6rem;
+          }
+        }
+      `}</style>
     </section>
   );
 };

@@ -5,13 +5,7 @@ import Nav from './nav';
 
 const Layout = ({ children, home }) => {
   return (
-    <div
-      style={{
-        padding: '1rem 1rem 3rem 1rem',
-        maxWidth: '1280px',
-        margin: 'auto',
-      }}
-    >
+    <>
       <Head>
         <meta
           name="description"
@@ -19,9 +13,9 @@ const Layout = ({ children, home }) => {
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <div>
+      <div id="wrapper">
         <Nav />
-        <main>{children}</main>
+        {children}
         {!home && (
           <div>
             <Link href="/">
@@ -32,16 +26,26 @@ const Layout = ({ children, home }) => {
       </div>
       <style jsx>
         {`
+          #wrapper {
+            display: grid;
+            max-width: 968px;
+            margin: auto;
+            gap: 2rem;
+            padding: 1rem;
+          }
+
           @media (min-width: 768px) {
-            main {
-              display: grid;
-              grid-template-columns: minmax(min-content, 300px) 1fr;
-              gap: 1.5rem;
+            #wrapper {
+              grid-template-columns: minmax(min-content, 300px) minmax(
+                  200px,
+                  1fr
+                );
+              padding: 1.5rem 3rem;
             }
           }
         `}
       </style>
-    </div>
+    </>
   );
 };
 

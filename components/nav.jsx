@@ -47,6 +47,10 @@ const Nav = () => {
         </ul>
       </nav>
       <style jsx>{`
+        #logo {
+          margin-left: -6px;
+        }
+
         nav {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -59,9 +63,10 @@ const Nav = () => {
 
         .nav-links {
           list-style-type: none;
+          width: 100%;
           display: flex;
           align-items: center;
-          justify-self: flex-end;
+          justify-content: flex-end;
         }
 
         .nav-links li {
@@ -70,6 +75,12 @@ const Nav = () => {
 
         .nav-links li:last-of-type {
           margin-right: 0rem;
+        }
+
+        @media (min-width: 768px) {
+          .nav-container {
+            grid-column: 1 / -1;
+          }
         }
       `}</style>
     </div>

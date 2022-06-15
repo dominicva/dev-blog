@@ -1,43 +1,17 @@
-import { FaCode, FaTwitter, FaGithub } from 'react-icons/fa';
 import { MdLocationPin } from 'react-icons/md';
-import Image from 'next/image';
-import Nav from './nav';
 
 const firstName = 'Dom';
 const lastName = 'van Almsick';
 const fullName = `${firstName} ${lastName}`;
-const imageTitle = 'cosmic microwave background';
 const currentLocation = 'Mexico';
 
 const Intro = () => {
   return (
-    <aside className="intro-container">
+    <div className="intro-container">
       <h1>{fullName}</h1>
-      <a
-        id="link-location"
-        href="https://www.google.com/maps/place/Quintana+Roo/"
-        target="_blank"
-      >
-        <MdLocationPin size={30} />
-        <span style={{ paddingRight: '0.5rem' }}>Currently:</span>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Image
-            src="/svgs/mexican-flag.svg"
-            alt="Meixcan flag"
-            width={22}
-            height={16}
-            style={{
-              borderRadius: '2px',
-            }}
-          />
-          <span style={{ marginLeft: '0.25rem' }}>{currentLocation}</span>
-        </div>
-      </a>
+
       <div id="bio">
-        <p>
-          I am a full-stack <b>JavaScript enthusiast and teacher</b>. Click the
-          first icon above to schedule a (free) pair programming session 🤓.
-        </p>
+        <p>I am a JavaScript enthusiast and teacher.</p>
         <p>
           Other things I care about mostly relate to{' '}
           <a
@@ -49,8 +23,26 @@ const Intro = () => {
           </a>{' '}
           and the long-term future.
         </p>
+        <div>
+          <a
+            href="https://www.google.com/maps/place/Quintana+Roo/"
+            target="_blank noopener noreferrer"
+            className="text-link"
+            style={{ display: 'inline-flex', gap: '4px' }}
+          >
+            <MdLocationPin size={22} />
+            <span style={{ marginTop: '1px' }}>
+              Currently in {currentLocation}
+            </span>
+          </a>
+        </div>
       </div>
       <style jsx>{`
+        .intro-container {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
         .container {
           display: flex;
           flex-direction: column;
@@ -77,10 +69,11 @@ const Intro = () => {
         }
 
         #bio p {
-          margin-bottom: 0.5rem;
+          margin-bottom: 48px;
+          margin-top: 0;
         }
       `}</style>
-    </aside>
+    </div>
   );
 };
 

@@ -27,20 +27,23 @@ const Layout = ({ children, home }) => {
       <style jsx>
         {`
           #wrapper {
-            display: grid;
-            max-width: 968px;
+            display: flex;
+            flex-direction: column;
+            max-width: 560px;
             margin: auto;
-            gap: 2rem;
-            padding: 1rem;
+            gap: 32px;
+            padding: 32px 24px;
+          }
+
+          @media (min-width: 560px) {
+            #wrapper {
+              margin-top: 40px;
+            }
           }
 
           @media (min-width: 768px) {
             #wrapper {
-              grid-template-columns: minmax(min-content, 300px) minmax(
-                  200px,
-                  1fr
-                );
-              padding: 1.5rem 3rem;
+              margin-top: 80px;
             }
           }
         `}
@@ -50,9 +53,3 @@ const Layout = ({ children, home }) => {
 };
 
 export default Layout;
-
-/**
- *     display: grid;
-    grid-template-columns: minmax(min-content, 300px) 1fr;
-    gap: 1.5rem;
- */

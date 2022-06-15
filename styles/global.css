@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap');
+
 :root {
   --white: rgba(255, 255, 255, 0.87);
   --white-dim: rgba(255, 255, 255, 0.75);
@@ -8,11 +10,14 @@
   --secondary-light: #7bffff;
   --secondary-dark: #00bd9c;
   --error: #ff6663;
+
+  box-sizing: border-box;
 }
 
-* {
-  box-sizing: border-box;
-  /* border: 0.1px solid orange; */
+*,
+*::after,
+*::after {
+  box-sizing: inherit;
 }
 
 html,
@@ -20,12 +25,16 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Overpass Mono', monospace;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
   color: var(--white);
   background-color: var(--primary);
+}
+
+h1 {
+  letter-spacing: 1.5px;
 }
 
 h1,
@@ -60,7 +69,6 @@ a {
 
 a:hover {
   opacity: 1;
-  /* text-decoration: underline; */
 }
 
 /*

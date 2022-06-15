@@ -1,47 +1,35 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import { FaCode, FaTwitter, FaGithub } from 'react-icons/fa';
+
 const Nav = () => {
   return (
     <div className="nav-container">
       <nav>
-        <Link href="/">
-          <a id="logo">
-            <Image
-              src="/images/logo.svg"
-              alt="logo"
-              width={48}
-              height={48}
-              style={{ borderRadius: '50%' }}
-            />
-          </a>
-        </Link>
         <ul className="nav-links">
           <li>
             <a
               href="https://calendly.com/dominicvana/pair-programming"
-              target="_blank"
+              target="_blank noopener noreferrer"
               className="social-icon"
             >
-              <FaCode size={32} />
+              <FaCode size={20} />
             </a>
           </li>
           <li>
             <a
               href="https://www.twitter.com/dominicva"
-              target="_blank"
+              target="_blank noopener noreferrer"
               className="social-icon"
             >
-              <FaTwitter size={32} />
+              <FaTwitter size={20} />
             </a>
           </li>
           <li>
             <a
               href="https://www.github.com/dominicva"
-              target="_blank"
+              target="_blank noopener noreferrer"
               className="social-icon"
             >
-              <FaGithub size={32} />
+              <FaGithub size={20} />
             </a>
           </li>
         </ul>
@@ -52,8 +40,8 @@ const Nav = () => {
         }
 
         nav {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+          display: flex;
+          justify-content: space-between;
         }
 
         a,
@@ -66,20 +54,24 @@ const Nav = () => {
           width: 100%;
           display: flex;
           align-items: center;
-          justify-content: flex-end;
         }
 
         .nav-links li {
-          margin-right: 1rem;
+          margin-right: 24px;
         }
 
         .nav-links li:last-of-type {
           margin-right: 0rem;
         }
 
+        @media (min-width: 560px) {
+          .nav-links {
+            margin-right: 32px;
+          }
+        }
         @media (min-width: 768px) {
-          .nav-container {
-            grid-column: 1 / -1;
+          .nav-links {
+            margin-right: 48px;
           }
         }
       `}</style>

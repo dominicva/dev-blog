@@ -69,8 +69,15 @@ const Intro = () => {
         }
 
         #bio p {
-          margin-bottom: 48px;
+          margin-bottom: 32px;
           margin-top: 0;
+        }
+
+        @media (min-width: 560px) {
+          #bio p:last-of-type {
+            margin-bottom: 48px;
+            margin-top: 0;
+          }
         }
       `}</style>
     </div>

@@ -1,4 +1,4 @@
-import { target } from './constants';
+import { calendly, twitter, github, cv, target } from './constants';
 
 import { FaTwitter, FaGithub } from 'react-icons/fa';
 import { AiOutlineCode } from 'react-icons/ai';
@@ -9,34 +9,22 @@ const Nav = () => {
       <nav>
         <ul className="nav-links">
           <li>
-            <a
-              href="https://calendly.com/dominicvana/pair-programming"
-              target={target}
-              className="social-icon"
-            >
+            <a href={calendly} target={target} className="social-icon">
               <AiOutlineCode size={21} />
             </a>
           </li>
           <li>
-            <a
-              href="https://www.twitter.com/dominicva"
-              target={target}
-              className="social-icon"
-            >
+            <a href={twitter} target={target} className="social-icon">
               <FaTwitter size={20} />
             </a>
           </li>
           <li>
-            <a
-              href="https://www.github.com/dominicva"
-              target={target}
-              className="social-icon"
-            >
+            <a href={github} target={target} className="social-icon">
               <FaGithub size={20} />
             </a>
           </li>
           <li>
-            <a href="https://standardresume.co/r/dominicva" target={target}>
+            <a href={cv} target={target}>
               cv
             </a>
           </li>

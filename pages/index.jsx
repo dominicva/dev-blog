@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 import Intro from '../components/intro';
+import { siteTitle } from '../components/constants';
 
-export default function Home({}) {
+export default function Home() {
   return (
     <Layout home>
       <Head>

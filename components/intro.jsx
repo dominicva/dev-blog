@@ -1,9 +1,5 @@
 import { MdLocationPin } from 'react-icons/md';
-
-const firstName = 'Dom';
-const lastName = 'van Almsick';
-const fullName = `${firstName} ${lastName}`;
-const currentLocation = 'Munich, Germany';
+import { fullName, currentLocation } from './constants';
 
 const Intro = () => {
   return (

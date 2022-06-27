@@ -1,4 +1,7 @@
-import { FaCode, FaTwitter, FaGithub } from 'react-icons/fa';
+import { target } from './constants';
+
+import { FaTwitter, FaGithub } from 'react-icons/fa';
+import { AiOutlineCode } from 'react-icons/ai';
 
 const Nav = () => {
   return (
@@ -8,16 +11,16 @@ const Nav = () => {
           <li>
             <a
               href="https://calendly.com/dominicvana/pair-programming"
-              target="_blank noopener noreferrer"
+              target={target}
               className="social-icon"
             >
-              <FaCode size={20} />
+              <AiOutlineCode size={21} />
             </a>
           </li>
           <li>
             <a
               href="https://www.twitter.com/dominicva"
-              target="_blank noopener noreferrer"
+              target={target}
               className="social-icon"
             >
               <FaTwitter size={20} />
@@ -26,10 +29,18 @@ const Nav = () => {
           <li>
             <a
               href="https://www.github.com/dominicva"
-              target="_blank noopener noreferrer"
+              target={target}
               className="social-icon"
             >
               <FaGithub size={20} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://standardresume.co/r/N2ujKvwp9uSmudrA3iHmc"
+              target={target}
+            >
+              cv
             </a>
           </li>
         </ul>
@@ -49,11 +60,14 @@ const Nav = () => {
           list-style-type: none;
           width: 100%;
           display: flex;
-          align-items: center;
         }
 
         .nav-links li {
           margin-right: 24px;
+        }
+
+        .nav-links a {
+          display: flex;
         }
 
         .nav-links li:last-of-type {

@@ -3,7 +3,7 @@ import { MdLocationPin } from 'react-icons/md';
 const firstName = 'Dom';
 const lastName = 'van Almsick';
 const fullName = `${firstName} ${lastName}`;
-const currentLocation = 'Mexico';
+const currentLocation = 'Munich, Germany';
 
 const Intro = () => {
   return (
@@ -17,7 +17,7 @@ const Intro = () => {
           <a
             className="text-link"
             href="https://www.effectivealtruism.org/"
-            target="_blank"
+            target="_blank noopener noreferrer"
           >
             <b>effective altruism</b>
           </a>{' '}
@@ -25,7 +25,7 @@ const Intro = () => {
         </p>
         <div>
           <a
-            href="https://www.google.com/maps/place/Quintana+Roo/"
+            href="https://goo.gl/maps/VyuXURq8352uJAew8"
             target="_blank noopener noreferrer"
             className="text-link"
             style={{ display: 'inline-flex', gap: '4px' }}

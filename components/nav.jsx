@@ -35,10 +35,6 @@ const Nav = () => {
         </ul>
       </nav>
       <style jsx>{`
-        #logo {
-          margin-left: -6px;
-        }
-
         nav {
           display: flex;
           justify-content: space-between;

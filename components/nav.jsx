@@ -36,10 +36,7 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a
-              href="https://standardresume.co/r/N2ujKvwp9uSmudrA3iHmc"
-              target={target}
-            >
+            <a href="https://standardresume.co/r/dominicva" target={target}>
               cv
             </a>
           </li>

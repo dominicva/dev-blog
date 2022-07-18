@@ -21,7 +21,7 @@ const Intro = () => {
         </p>
         <div>
           <a
-            href="https://goo.gl/maps/VyuXURq8352uJAew8"
+            href="https://goo.gl/maps/3AjxUdP1QkUtN6tW6"
             target="_blank noopener noreferrer"
             className="text-link"
             style={{ display: 'inline-flex', gap: '4px' }}
